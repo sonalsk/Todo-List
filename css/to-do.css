@@ -1,0 +1,104 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  --background: #2A0944;
+  --header: #FEC260;
+  --red: #E05D5D;
+  --todo: #FFF8E5;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  font-family: "Poppins", serif;
+  background-color: var(--background);
+}
+
+ul {
+  list-style-type: none;
+}
+
+.todo-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+}
+
+.heading {
+  color: var(--header);
+  font-size: 4rem;
+}
+
+.input-form {
+  margin: 2rem 0rem;
+}
+
+.enter-todo {
+  width: 14rem;
+  border: none;
+  outline: none;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  margin-right: 0.5rem;
+  font-size: 1rem;
+}
+
+.add-todo {
+  color: var(--background);
+  border: none;
+  outline: none;
+  border-radius: 0.5rem;
+  padding: 0.35rem;
+  font-size: 1.2rem;
+}
+
+.add-todo:hover {
+  background-color: var(--red);
+}
+
+.todo-list {
+  min-width: 19rem;
+  padding: 0.5rem;
+}
+
+.item {
+  background-color: var(--todo);
+  padding: 10px;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+}
+
+.checkbox {
+  margin-right: 0.5rem;
+}
+
+.completed { 
+  text-decoration: line-through;
+}
+
+.remove-todo {
+  float: right;
+  background-color: var(--red);
+  color: var(--todo);
+  border: none;
+  outline: none;
+  border-radius: 0.5rem;
+  padding: 0.1rem 0.4rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.remove-todo:hover {
+  background-color: var(--header);
+  color: var(--background);
+}
