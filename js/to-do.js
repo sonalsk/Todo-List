@@ -14,7 +14,7 @@ function addTodo(item) {
     const todo = {
       id: Date.now(),
       name: item,
-      completed: false
+      checked: false
     };
 
     todos.push(todo);
@@ -28,19 +28,19 @@ function renderTodos(todos) {
   allTodos.innerHTML = '';
 
   todos.forEach(function(item) {
-    const completed = item.completed ? 'completed': null;
+    const checked = item.checked ? 'checked': null;
 
     const li = document.createElement('li');
     li.setAttribute('class', 'item');
     li.setAttribute('data-key', item.id);
-    if (item.completed === true) {
-      li.classList.add('completed');
+    if (item.checked === true) {
+      li.classList.add('checked');
     }
 
     li.innerHTML = `
-      <input type="checkbox" class="checkbox" ${completed}>
+      <input class="checkbox" type="checkbox" ${checked}>
       ${item.name}
-      <button class="remove-todo">X</button>
+      <button type="button" class="btn btn-danger remove-todo"><i class="fas fa-times"></i></button>
     `;
     allTodos.append(li);
   });
@@ -63,7 +63,7 @@ function getFromLocalStorage() {
 function toggle(id) {
   todos.forEach(function(item) {
     if (item.id == id) {
-      item.completed = !item.completed;
+      item.checked = !item.checked;
     }
   });
 

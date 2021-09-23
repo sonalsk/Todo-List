@@ -82,7 +82,7 @@ ul {
   margin-right: 0.5rem;
 }
 
-.completed { 
+.checked { 
   text-decoration: line-through;
 }
 
