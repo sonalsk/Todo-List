@@ -38,9 +38,9 @@ function renderTodos(todos) {
     }
 
     li.innerHTML = `
-      <input class="checkbox" type="checkbox" ${checked}>
+      <input type="checkbox" class="checkbox" ${checked}>
       ${item.name}
-      <button type="button" class="btn btn-danger remove-todo"><i class="fas fa-times"></i></button>
+      <button class="remove-todo">X</button>
     `;
     allTodos.append(li);
   });
